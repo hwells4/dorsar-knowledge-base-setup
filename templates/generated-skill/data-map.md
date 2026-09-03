@@ -1,4 +1,4 @@
-# Dorsar data map
+# Dorsar data map: how SharePoint is structured
 
 Interviewed <YYYY-MM-DD> with Bill Feinberg<, and names of teammates present>. Re-run the `dorsar-knowledge-base-setup` skill to change anything structural here; day-to-day rule changes are edited in place.
 
@@ -12,9 +12,8 @@ Interviewed <YYYY-MM-DD> with Bill Feinberg<, and names of teammates present>. R
 | Due diligence on new investments | `<path>` | | <by prospect> |
 | Real estate asset management | `<path>` | | <by property or entity> |
 | Legal documents | `<path>` | | |
-| AI work with no existing home | `<Dorsar AI/Outputs path>` | Slack summary | one file per investment per period |
-| Ledger of everything the AI made | `<Dorsar AI/Outputs path>/index.md` | | one line per output |
-| Memory of the business and of Bill | `<Dorsar AI/Context path>` | | about-dorsar.md, about-bill.md |
+| AI work | `<AI Outputs path>` | Slack summary | one file per investment per period |
+| Ledger of everything the AI made | `<AI Outputs path>/Index/index.md` | | one line per output |
 
 ## Who wins
 
@@ -25,11 +24,12 @@ Interviewed <YYYY-MM-DD> with Bill Feinberg<, and names of teammates present>. R
 | Dorsar's position on an investment | The investment's Word note, newest dated entry |
 | Anything discussed in chat | Nothing until it is in SharePoint |
 
-## Outputs
+## AI Outputs
 
-Path: `<Dorsar AI/Outputs path>`
+Path: `<AI Outputs path>`
+Index: `<AI Outputs path>/Index/index.md`
 Name shape: `YYYY-MM-DD investment what period`
-Approval: Bill approves a draft before its entry goes into the Word note. Log each approval in `log.md`.
+Approval: Bill approves a draft before its entry goes into the Word note. Approval flips the index line to approved.
 
 ## Off limits
 
@@ -40,7 +40,7 @@ Approval: Bill approves a draft before its entry goes into the Word note. Log ea
 
 ## Team
 
-Owner of the Dorsar AI library: Bill Feinberg. Shared via SharePoint, synced through OneDrive. Who else uses it: <operations analyst>, <SharePoint teammate>. IT contact for permissions: <name>.
+Owner of the AI Outputs folder and this skill: Bill Feinberg. Shared via SharePoint, synced through OneDrive. Who else uses it: <operations analyst>, <SharePoint teammate>. IT contact for permissions: <name>.
 
 ## Test investments
 

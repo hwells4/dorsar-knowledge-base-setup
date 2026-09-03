@@ -61,8 +61,8 @@ Recommend: SharePoint copy is what the agent reads; the manager's report is the 
 ### D7. Outputs
 Known: draft-first, nothing writes to the Word note without approval.
 Ask: where in SharePoint should draft reviews land so all three people can find them, and does Bill want them delivered through Slack as well?
-Also ask: for each kind of thing the AI will make (quarterly review, diligence memo, financial summary), does Dorsar already keep that kind of thing somewhere? That existing place is where the AI files it; `Outputs` is for everything without a home, and `Outputs/index.md` lists all of it.
-Recommend: a `Dorsar AI` library with `Outputs` and its index, plus the Slack summary. This is the one non-negotiable proposal.
+Also ask: for each kind of thing the AI will make (quarterly review, diligence memo, financial summary), does Dorsar already keep that kind of thing somewhere? That existing place is where the AI saves it; `AI Outputs` is the default for everything else, and `AI Outputs/Index/index.md` lists all of it.
+Recommend: an `AI Outputs` folder with an `Index` inside, in the library all three people can see, plus the Slack summary. This is the one non-negotiable proposal.
 
 ### D8. Reading rules
 Known: off limits are board strategy, family matters, compensation, employee reviews, personal information.
@@ -80,7 +80,7 @@ Recommend: nothing. Listen and write it down; it becomes the review standard in 
 
 ## What the interview also produces
 
-The answers to D1, D8, D9, and D10 plus how the owner wants recommendations delivered are written into the two `Context/` files from `templates/context/` in step 4. Ask one extra question for the owner file if nothing so far has covered it: "When I give you an answer, what do you want first: the recommendation, the reasoning, or the evidence?"
+The answers to D1, D8, D9, and D10 plus how Bill wants recommendations delivered are written into `about-dorsar.md` and `about-bill.md` inside the generated skill in step 5. Ask one extra question for the owner file if nothing so far has covered it: "When I give you an answer, what do you want first: the recommendation, the reasoning, or the evidence?"
 
 ## Readback
 

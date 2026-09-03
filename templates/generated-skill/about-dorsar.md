@@ -1,6 +1,6 @@
 # About Dorsar Investment Management
 
-Read at the start of every session. This is the agent's memory of the business; chat history is not.
+Part of the `work` skill. Read at the start of every session. This is the agent's memory of the business; chat history is not.
 
 Dorsar Investment Management, Santa Fe, New Mexico. A family investment office managing roughly 65 private investments and roughly 50 reporting entities, with real estate a large share of the asset management work.
 

@@ -43,7 +43,7 @@ Dorsar Investment Management, Santa Fe, New Mexico. Bill Feinberg is CIO and the
 - Personal material lives on a RAID drive at home, never on SharePoint. Anything personal in Claude chat history is the only overlap.
 - Bill runs Claude on the top subscription and ChatGPT on the middle one and filters questions through both. Employees are getting paid Claude accounts. He installed the Claude desktop app on his laptop in August. Windows throughout.
 - Slack for employees and the outsourced financial reporting group; Teams for the outsourced accounting group. He prefers Slack or text to email, and dislikes the phone.
-- The hallucination that worries him: Claude told him he attended a college he never attended and lacked an MBA he has, after he had uploaded his CV. That is the "agents forget who I am" problem; `Context/about-bill.md` is the answer.
+- The hallucination that worries him: Claude told him he attended a college he never attended and lacked an MBA he has, after he had uploaded his CV. That is the "agents forget who I am" problem; `about-bill.md` inside the `work` skill is the answer.
 - He finds model flattery patronising and wants to know how to turn it off. Recommendations should be plain and direct.
 - He wants to be hands-on for anything tied to his CIO role and hands-off on plumbing. He is prone to optimisation rabbit holes and has asked to be told when something is good enough.
 - The outsourced IT firm sets up accounts and services; he stopped doing tech support for his employees.

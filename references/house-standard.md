@@ -4,13 +4,12 @@ What to propose when the interview answered "we do not have this yet". One item 
 
 ## The one required item
 
-A `Dorsar AI` document library (or folder in an existing library all three people can see) holding three things:
+Two things in SharePoint, outside the skill, in the library all three people can see:
 
-- `Outputs/` with `index.md`, the ledger. Work that has an existing home in SharePoint (an investment report beside the other investment reports) is written there; work with no home is written in `Outputs/`. Every piece gets one index line either way: date, what, where it lives, sources, draft or approved. Named `YYYY-MM-DD investment what period` (example: `2026-09-18 blackrock-re-fund-iv quarterly-review 2026-Q2.docx`). Never overwritten; a revision is a new dated file. The index is the seed of the wiki: it grows one line per output and is the place a future wiki compiles from.
-- `Context/` with `about-dorsar.md` and `about-bill.md`, from [`../templates/context/`](../templates/context/), pre-seeded from the August calls and finished in the interview. Read at the start of every session; this is how agents stop forgetting who Bill is.
-- The skills under `.agents/skills/`.
+- `AI Outputs/`: where the AI saves its work by default. Work that has an existing home in SharePoint (an investment report beside the other investment reports) is saved there instead. Named `YYYY-MM-DD investment what period` (example: `2026-09-18 blackrock-re-fund-iv quarterly-review 2026-Q2.docx`). Never overwritten; a revision is a new dated file.
+- `AI Outputs/Index/index.md`: the ledger. Every piece the AI makes, wherever it was saved, gets one line: date, what, where it lives, sources, draft or approved. The index is the seed of the wiki: it grows one line per output and is what a future wiki compiles from.
 
-When Bill approves a draft, the agent adds the entry to the investment's Word note and flips the index line to approved.
+And one skill, `work`, under `.agents/skills/`, which teaches the agent to use both and carries the data map (how SharePoint is structured) and the memory files (`about-dorsar.md`, `about-bill.md`, pre-seeded from the August calls and finished in the interview). When Bill approves a draft, the agent adds the entry to the investment's Word note and flips the index line to approved.
 
 ## Shape: SharePoint as the knowledge base
 
@@ -22,22 +21,19 @@ Dorsar stays in SharePoint. There is no markdown wiki in month one; the Word not
     <investment>/                   quarterly packages + the Word note, untouched
   <Entity financials library>/      existing (confirm in D2, D3)
   <Diligence library or folder>/    existing (confirm in D2)
-  Dorsar AI/                        new
-    Outputs/                        work with no existing home, plus index.md, the ledger of everything the AI made
-    Context/                        about-dorsar.md, about-bill.md: the agent's memory, read every session
-    Review standards/               what a review must catch, cite, compare, escalate (written in week 1)
-    CLAUDE.md, AGENTS.md            pointer paragraph from templates/kb-root/
-    .agents/skills/
-      work/        the manual, edited in place as rules change
-        preferences/<person>.md     personal habits for Bill, the analyst, the SharePoint teammate
-      join-knowledge-base/          connects a new machine
+  AI Outputs/                       new: where the AI saves its work
+    Index/index.md                  the ledger of everything the AI made
+  CLAUDE.md, AGENTS.md              pointer paragraph from templates/kb-root/
+  .agents/skills/
+    work/                           the skill: SKILL.md, data-map.md, about-dorsar.md, about-bill.md, preferences/
+    join-knowledge-base/            connects a new machine
 ```
 
 Rules the generated skill carries:
 
 - Read the SharePoint copy of a package, never the chat history and never a summary of a summary.
 - Every output shows its sources by file name and page, says what changed since the prior period, states uncertainty, and marks where Bill's judgment is required.
-- Draft-first: `Outputs` is the only place the agent creates files. Word notes get entries only after Bill approves, and the approval is logged.
+- Draft-first: `AI Outputs` is the only place the agent creates files. Word notes get entries only after Bill approves, and the approval is logged.
 - Off-limits folders are named in the data map and skipped even when asked to "search everything".
 
 ## Automation, later

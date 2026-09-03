@@ -1,6 +1,6 @@
 # About Bill Feinberg
 
-Read at the start of every session, after `about-dorsar.md`. Bill has told agents who he is before and they forgot; this file is how they stop forgetting.
+Part of the `work` skill. Read at the start of every session, after `about-dorsar.md`. Bill has told agents who he is before and they forgot; this file is how they stop forgetting.
 
 ## Role
 

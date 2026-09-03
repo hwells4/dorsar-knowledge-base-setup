@@ -40,23 +40,23 @@ Done when: every domain in the interview guide has an answer or an explicit "we 
 
 ### 4. Propose what is missing
 
-For each gap, propose the Dorsar standard from [`references/house-standard.md`](references/house-standard.md), one proposal at a time, in Bill's words. The one required item is an outputs folder in SharePoint where every AI-produced review lands first, draft-only, so nothing touches an investment's Word note until Bill approves it.
+For each gap, propose the Dorsar standard from [`references/house-standard.md`](references/house-standard.md), one proposal at a time, in Bill's words. The one required item is an `AI Outputs` folder in SharePoint, with an `Index` inside it, where the AI saves its work and records every piece, so nothing touches an investment's Word note until Bill approves it.
 
-On approval create the empty folders, `Outputs/index.md` from [`templates/outputs-index.md`](templates/outputs-index.md), the two `Context/` files from [`templates/context/`](templates/context/) finished with what the interview settled, and the root `CLAUDE.md` and `AGENTS.md` from [`templates/kb-root/`](templates/kb-root/). Existing files stay exactly where they are.
+On approval create `AI Outputs/` and `AI Outputs/Index/index.md` from [`templates/outputs-index.md`](templates/outputs-index.md), and the root `CLAUDE.md` and `AGENTS.md` from [`templates/kb-root/`](templates/kb-root/). Existing files stay exactly where they are.
 
-Done when: every gap has an approved home, the approved folders exist, and Bill has read `Context/about-bill.md` and said it is right.
+Done when: every gap has an approved home and the approved folders exist.
 
 ### 5. Generate the skill
 
-Read both files in [`references/writing-for-agents/`](references/writing-for-agents/) before writing a line. Then fill [`templates/generated-skill/`](templates/generated-skill/), already pre-seeded with Dorsar's buckets, with what the interview settled. The generated skill is what Bill's agents run every session, and the quarterly report review skill built in weeks 2 to 3 will lean on it for every path it reads and writes.
+Read both files in [`references/writing-for-agents/`](references/writing-for-agents/) before writing a line. Then fill [`templates/generated-skill/`](templates/generated-skill/), already pre-seeded with Dorsar's buckets, with what the interview settled. The whole folder is the `work` skill: SKILL.md (the rules), data-map.md (how SharePoint is structured), about-dorsar.md and about-bill.md (the memory), preferences/. It is what Bill's agents run every session, and the quarterly report review skill built in weeks 2 to 3 will lean on it for every path it reads and writes.
 
-Done when: the generated SKILL.md is under 60 lines and carries the change protocol from the template, `data-map.md` names a home for every bucket, and a fresh agent reading only those two files could find the latest quarterly package for a named investment and file a draft review in the right place.
+Done when: the generated SKILL.md is under 60 lines and carries the change protocol from the template, `data-map.md` names a home for every bucket, Bill has read `about-bill.md` and said it is right, and a fresh agent reading only this folder could find the latest quarterly package for a named investment, save a draft review in `AI Outputs`, and write its index line.
 
 ### 6. Install and hand over
 
-Follow [`references/install.md`](references/install.md): the manual and a copy of [`templates/join-knowledge-base/`](templates/join-knowledge-base/) go under `.agents/skills/` in the synced SharePoint folder, and the join skill links them into each person's home directory on Claude Code and Codex. Run the join on Bill's machine yourself during the session. Give Bill a one-paragraph summary and the sentence for his two teammates: "open Claude Code in the Dorsar AI folder and say set me up".
+Follow [`references/install.md`](references/install.md): the `work` skill and a copy of [`templates/join-knowledge-base/`](templates/join-knowledge-base/) go under `.agents/skills/` in the synced SharePoint folder, and the join skill links them into each person's home directory on Claude Code and Codex. Run the join on Bill's machine yourself during the session. Give Bill a one-paragraph summary and the sentence for his two teammates: "open Claude Code in the Dorsar folder and say set me up".
 
-Done when: the skill loads in a fresh session in the home folder on Bill's machine and Bill has the handover paragraph.
+Done when: `/work` loads in a fresh session in the home folder on Bill's machine, answers "where do you save your work?" with `AI Outputs` and "who am I?" from `about-bill.md`, and Bill has the handover paragraph.
 
 ## Re-runs
 

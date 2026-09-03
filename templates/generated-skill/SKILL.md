@@ -1,17 +1,21 @@
 ---
 name: work
-description: "How work gets done at Dorsar Investment Management: where the information lives (investment folders and Word notes, entity financials, diligence), where outputs go by default, how they are named, and how every piece is recorded in the outputs index. Load at the start of every session and before reading or creating any file for Dorsar."
+description: "How work gets done at Dorsar Investment Management: how SharePoint is structured, where the AI saves its work (the AI Outputs folder), how every piece is named and recorded in the index, who Bill is and how he wants to be worked with. Load at the start of every session and before reading or creating any file for Dorsar."
 ---
 
-Dorsar Investment Management manages roughly 65 private investments and 50 reporting entities. SharePoint is the source of truth; chat history is not. This skill is the team's operating manual.
+Dorsar Investment Management manages roughly 65 private investments and 50 reporting entities. SharePoint is the source of truth; chat history is not. This skill is the team's operating manual, and everything it needs is in this folder.
 
 ## Session start
 
-Read, in this order, before doing anything else: `Context/about-dorsar.md` (the business, systems, standing rules), `Context/about-bill.md` (who you work for and how he wants to be worked with), [`data-map.md`](data-map.md) (where every bucket lives, folders to stay out of), then `preferences/<your user's name>.md` if it exists (that one person's habits, which win over team defaults in their sessions only). These files are your memory across sessions and across Claude Code, Codex, and chat. If a session starts with "you have forgotten who I am", the fix is reading these files, then adding what was missing to them.
+Read, in this order, before doing anything else: [`about-dorsar.md`](about-dorsar.md) (the business, its systems, standing rules), [`about-bill.md`](about-bill.md) (who you work for and how he wants to be worked with), [`data-map.md`](data-map.md) (how SharePoint is structured, where each kind of file lives, folders to stay out of), then `preferences/<your user's name>.md` if it exists (that one person's habits, which win over team defaults in their sessions only). These files are your memory across sessions and across Claude Code, Codex, and chat. If a session starts with "you have forgotten who I am", the fix is reading these files, then adding what was missing to them.
 
-## Filing new work
+## Saving work
 
-Every piece of work has a home. If Dorsar already keeps that kind of thing somewhere (an investment report next to the other investment reports, a diligence memo in the prospect's folder), write it there. If it has no existing home, write it in `<Dorsar AI/Outputs path>`. Either way, name it `YYYY-MM-DD investment what period` and add one line to `Outputs/index.md`: date, what, where it lives, sources, draft or approved. The index is the ledger; anything the AI ever made is findable from it. A revision is a new dated file; the newest date is current and older files stay.
+Every piece of work you produce is saved in `AI Outputs/` in SharePoint (the path is in the data map), named `YYYY-MM-DD investment what period` (example: `2026-09-18 <investment> quarterly-review 2026-Q2.docx`). When Dorsar already keeps that kind of thing somewhere (an investment report beside the other investment reports), save it there instead and still record it below. A revision is a new dated file; the newest date is current and older files stay.
+
+## Recording work in the index
+
+`AI Outputs/Index/index.md` is the ledger of everything the AI has ever made. After saving any file, add one line: date, what, where it lives, the sources it came from, draft or approved. A file without an index line does not count as done. Anyone can find any past piece of work from the index alone.
 
 Done when the file exists at its home with the date-first name and the index line is written.
 
@@ -21,7 +25,7 @@ Read the SharePoint copy of a package, from the investment's own folder. Compare
 
 ## Writing rules
 
-Create freely in `<Dorsar AI/Outputs path>`, in `Context/`, and in this skill's folder. Anywhere else in SharePoint, write a new file only when filing work to its existing home as above. Word notes get a new entry only after Bill approves the draft, and only the entry, never edits to what is already there. Approvals are logged in the index (status becomes approved) and in `log.md`.
+Create freely in `AI Outputs/` and in this skill's folder. Anywhere else in SharePoint, write a new file only when saving work to its existing home as above. Word notes get a new entry only after Bill approves the draft, and only the entry, never edits to what is already there. Approval flips the index line to approved.
 
 ## Off limits
 
@@ -29,10 +33,10 @@ Create freely in `<Dorsar AI/Outputs path>`, in `Context/`, and in this skill's 
 
 ## Changing how we work
 
-Any of the three of you changes this manual by telling the agent. When someone states a standing rule ("from now on drafts also go to Slack"), check it is a rule and not a one-off: ask "every time, or just this one?" if the wording leaves room. A rule is edited into this file, `data-map.md`, or `Context/about-dorsar.md` the same session, with one dated line in `log.md`. A personal habit ("give me the fast no first") goes in `Context/about-bill.md` under preferences learned, or in `preferences/<their name>.md` for a teammate. Say: "done, that applies from your next chat."
+Any of the three of you changes this manual by telling the agent. When someone states a standing rule ("from now on drafts also go to Slack"), check it is a rule and not a one-off: ask "every time, or just this one?" if the wording leaves room. A rule is edited into this file, `data-map.md`, or `about-dorsar.md` the same session, with one dated line at the bottom of the file that changed. A personal habit ("give me the fast no first") goes in `about-bill.md` under preferences learned, or in `preferences/<their name>.md` for a teammate. Say: "done, that applies from your next chat."
 
 Keep this file under 60 lines: adding a rule that pushes it over means an older rule moves, merges, or goes.
 
 ## Checking the knowledge base
 
-When asked to "check the knowledge base", or on the first session of each month: every file the AI created since the last check has an index line (find orphans by date, add the lines); every index line points at a file that exists; `Context/` files match what the team has said since they were written; this file has no contradictions. Report what was fixed in five lines or fewer.
+When asked to "check the knowledge base", or on the first session of each month: every file the AI created since the last check has an index line (find orphans by date, add the lines); every index line points at a file that exists; `about-dorsar.md` and `about-bill.md` match what the team has said since they were written; this file has no contradictions. Report what was fixed in five lines or fewer.
