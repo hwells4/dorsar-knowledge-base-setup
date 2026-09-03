@@ -9,7 +9,7 @@ Two things in SharePoint, outside the skill, in the library all three people can
 - `AI Outputs/`: where the AI saves its work by default. Work that has an existing home in SharePoint (an investment report beside the other investment reports) is saved there instead. Named `YYYY-MM-DD investment what period` (example: `2026-09-18 blackrock-re-fund-iv quarterly-review 2026-Q2.docx`). Never overwritten; a revision is a new dated file.
 - `AI Outputs/Index/index.md`: the ledger. Every piece the AI makes, wherever it was saved, gets one line: date, what, where it lives, sources, draft or approved. The index is the seed of the wiki: it grows one line per output and is what a future wiki compiles from.
 
-And one skill, `work`, under `.agents/skills/`, which teaches the agent to use both and carries the data map (how SharePoint is structured) and the memory files (`about-dorsar.md`, `about-bill.md`, pre-seeded from the August calls and finished in the interview). When Bill approves a draft, the agent adds the entry to the investment's Word note and flips the index line to approved.
+And one skill, `work`, under `.claude/skills/` in the synced folder, which teaches the agent to use both and carries the data map (how SharePoint is structured) and the memory files (`about-dorsar.md`, `about-bill.md`, pre-seeded from the August calls and finished in the interview). When Bill approves a draft, the agent adds the entry to the investment's Word note and flips the index line to approved.
 
 ## Shape: SharePoint as the knowledge base
 
@@ -24,9 +24,7 @@ Dorsar stays in SharePoint. There is no markdown wiki in month one; the Word not
   AI Outputs/                       new: where the AI saves its work
     Index/index.md                  the ledger of everything the AI made
   CLAUDE.md, AGENTS.md              pointer paragraph from templates/kb-root/
-  .agents/skills/
-    work/                           the skill: SKILL.md, data-map.md, about-dorsar.md, about-bill.md, preferences/
-    join-knowledge-base/            connects a new machine
+  .claude/skills/work/              the skill: SKILL.md, data-map.md, about-dorsar.md, about-bill.md, preferences/
 ```
 
 Rules the generated skill carries:
@@ -54,5 +52,5 @@ If month 3 brings monthly financial review across 50 entities, a compiled `wiki/
 | Who wins | SharePoint copy over Arch email for reading; manager's report is the fact, Word note is Dorsar's view |
 | Reading | Every synced library except the named off-limits folders |
 | Writing | Create in `Outputs`; propose Word note entries; edit nothing else |
-| Team | Bill owns the library; the analyst and SharePoint teammate join by saying "set me up" |
+| Team | Bill owns the folder; the analyst and SharePoint teammate open the Code tab in the same synced folder |
 | Personal habits | `preferences/<person>.md` inside the skill, read only in that person's sessions |

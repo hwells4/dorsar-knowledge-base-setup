@@ -26,4 +26,4 @@ Claude Code picks up a new skill folder without a restart. Then say: "set up Dor
 
 - `SKILL.md`: the steps, from surveying the machine to handing over.
 - `references/`: Dorsar context, the interview guide, the SharePoint standard, install notes, environment survey, and a verbatim copy of Matt Pocock's writing-for-agents reference (MIT).
-- `templates/`: the generated `work` skill (rules, data map, memory files, preferences), the AI Outputs index, the join skill, and the root pointer files.
+- `templates/`: the generated `work` skill (rules, data map, memory files, preferences), the AI Outputs index, and the root pointer files.

@@ -16,7 +16,7 @@ Facts are your job. Decisions are Bill's. Look before you ask.
 
 ### 0. Survey the machine
 
-This is a new environment on its first run. Read [`references/environment.md`](references/environment.md) and run its survey before anything else: platform, shell, skill folders, synced-folder path, whether links work, which harnesses are installed. Whatever it finds overrides any path or command written in this skill. When a script or instruction here fails against this machine, fix it in place, log it in `learnings.md`, and continue.
+This is a new environment on its first run. Read [`references/environment.md`](references/environment.md) and run its survey before anything else: platform, shell, synced-folder path, permission mode. Whatever it finds overrides any path or command written in this skill. When a script or instruction here fails against this machine, fix it in place, log it in `learnings.md`, and continue.
 
 Done when: the survey answers are in your notes and the interviewee knows what permission prompts to expect.
 
@@ -54,14 +54,14 @@ Done when: the generated SKILL.md is under 60 lines and carries the change proto
 
 ### 6. Install and hand over
 
-Follow [`references/install.md`](references/install.md): the `work` skill and a copy of [`templates/join-knowledge-base/`](templates/join-knowledge-base/) go under `.agents/skills/` in the synced SharePoint folder, and the join skill links them into each person's home directory on Claude Code and Codex. Run the join on Bill's machine yourself during the session. Give Bill a one-paragraph summary and the sentence for his two teammates: "open Claude Code in the Dorsar folder and say set me up".
+Follow [`references/install.md`](references/install.md): the `work` skill is written to `.claude/skills/work/` inside the synced SharePoint folder, and Claude Code reads it from there whenever the Code tab is opened in that folder. Nothing is installed on any machine. Give Bill a one-paragraph summary and the sentence for his two teammates: "open the Code tab in the Dorsar folder".
 
-Done when: `/work` loads in a fresh session in the home folder on Bill's machine, answers "where do you save your work?" with `AI Outputs` and "who am I?" from `about-bill.md`, and Bill has the handover paragraph.
+Done when: `/work` loads in a fresh Code tab session in the Dorsar folder on Bill's machine, answers "where do you save your work?" with `AI Outputs` and "who am I?" from `about-bill.md`, and Bill has the handover paragraph.
 
 ## Re-runs
 
-Day-to-day rule changes are handled by the generated skill editing itself. Re-run this skill only for a structural change: a new SharePoint library, the IT firm's professional AI identity coming online, monthly financial review starting in month 3, or a teammate joining. For those, read [`references/update.md`](references/update.md).
+Day-to-day rule changes are handled by the generated skill editing itself. Re-run this skill only for a structural change: a new SharePoint library, the IT firm's professional AI identity coming online, monthly financial review starting in month 3, Codex or any-directory loading being needed, or a teammate joining. For those, read [`references/update.md`](references/update.md).
 
 <learning_capture>
-A learning is an actionable discovery from executing this skill that should change future runs. Save one dated, atomic entry to `learnings.md` when execution hits friction: a question Bill or his team misread, a OneDrive sync or Windows junction path that failed, a proposal they rejected and why. Include the trigger, what failed or changed, the successful resolution, and the future rule. When the resolution was an edit to this skill's own scripts or references, name the file. Do not save Dorsar facts or interview answers; those belong in `references/dorsar-context.md` or the generated data map.
+A learning is an actionable discovery from executing this skill that should change future runs. Save one dated, atomic entry to `learnings.md` when execution hits friction: a question Bill or his team misread, a OneDrive sync path that failed, a proposal they rejected and why. Include the trigger, what failed or changed, the successful resolution, and the future rule. When the resolution was an edit to this skill's own scripts or references, name the file. Do not save Dorsar facts or interview answers; those belong in `references/dorsar-context.md` or the generated data map.
 </learning_capture>

@@ -6,18 +6,16 @@ This skill runs on a machine it has never seen: Bill's own Windows PC, a fresh C
 
 Run the checks that apply and keep the answers in your scratch notes:
 
-- Operating system and shell. Windows means PowerShell; `bash`, `python3`, `ln -s`, and `~` may all be absent or mean something else. Mac or Linux means bash is there and junctions are not.
-- Home directory and which skill folders exist: `~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`. Create the ones the join needs.
+- Operating system and shell. Windows means PowerShell; `bash`, `python3`, `ln -s`, and `~` may all be absent or mean something else. Mac or Linux means bash is there.
 - Which harness you are in and whether the other is installed. The Claude Desktop app's Code tab bundles its own engine, so `claude` may be missing from the terminal even though Claude Code is running; treat "no `claude` on PATH" as normal there. `codex --version` says whether Codex is present.
-- Which permission mode the session is in. Manual mode prompts on every folder creation and every junction; ask the person to switch to "Accept edits" for the setup session so the prompts stop, and say why.
+- Which permission mode the session is in. Manual mode prompts on every folder creation; ask the person to switch to "Accept edits" for the setup session so the prompts stop, and say why.
 - Where the synced folder is on this machine: OneDrive, Drive, or Dropbox root, and whether the files are on disk or cloud-only placeholders.
-- Whether a link works here: create one junction or symlink in a scratch location, list through it, remove it. If it fails, note why (permissions, policy, filesystem) before touching the real install.
-- Whether git exists. Absent git is fine; nothing in the synced-folder path needs it.
+- Whether git exists. The desktop app's Code tab wants Git for Windows installed; absent it, the shell tool falls back to PowerShell.
 - What the permission mode is: if every file write prompts, tell the interviewee what to expect before the interview starts, so the prompts are not a surprise.
 
 ## Adapt
 
-Pick the script or command that fits what the survey found, never the one the doc assumed. A Windows machine runs `join.ps1`; a Mac runs `join.sh`; a machine where neither runs gets the links created by hand, one command at a time, with the interviewee watching. A path in a reference file is an example of the shape, and the real path is whatever the survey listed.
+Pick the command that fits what the survey found, never the one the doc assumed. A path in a reference file is an example of the shape, and the real path is whatever the survey listed.
 
 ## Self-heal
 

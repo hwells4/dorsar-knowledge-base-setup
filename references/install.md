@@ -11,7 +11,9 @@ Three people, Windows PCs, SharePoint synced through OneDrive. No links, no inst
   .claude/skills/work/            the whole generated skill, from templates/generated-skill/
 ```
 
-Claude Code loads project skills from `.claude/skills/` inside whatever folder the session is opened in. So the rule for everyone is one sentence: open the Code tab in the Dorsar SharePoint folder. Bill does it on his PC; the analyst and the SharePoint teammate do it on theirs once OneDrive has synced the folder. Nothing to install on any machine.
+Claude Code loads project skills from `.claude/skills/` inside whatever folder the session is opened in. So the rule for everyone is one sentence: open the Code tab in the Dorsar SharePoint folder.
+
+Which folder, exactly: OneDrive syncs each SharePoint document library as its own folder under `Dorsar Investment Management`, and that parent is not itself synced. So the project is the library that holds the investment folders, and `AI Outputs/`, `CLAUDE.md`, and `.claude/skills/work/` go inside that library, at its top level. If the interview finds the investments split across several libraries, pick the one Bill opens most and note the others in the data map; reads across libraries ask permission once per folder. Bill does it on his PC; the analyst and the SharePoint teammate do it on theirs once OneDrive has synced the folder. Nothing to install on any machine.
 
 ## Where it runs
 
@@ -21,7 +23,9 @@ Two things the desktop app needs on Windows: Git for Windows installed before th
 
 ## Verify
 
-Fresh Code tab session in the Dorsar folder. Two questions: "where do you save your work?" (the answer names `AI Outputs` and the index) and "who am I?" (the answer comes from `about-bill.md`). Those two answers are the demo.
+First, in File Explorer, confirm OneDrive shows the `.claude` folder with a green check. Microsoft's current restrictions page lists no rule against names starting with a period, but older guides did, so look. If it will not sync, `/work` still runs on Bill's PC and the teammates get it later through the links in [`update.md`](update.md).
+
+Then a fresh Code tab session in the Dorsar folder. Two questions: "where do you save your work?" (the answer names `AI Outputs` and the index) and "who am I?" (the answer comes from `about-bill.md`). Those two answers are the demo.
 
 ## What stays out, for now
 
