@@ -1,0 +1,7 @@
+source: https://raw.githubusercontent.com/mattpocock/skills/main/skills/productivity/writing-for-agents
+synced: 2026-09-02T18:18:54Z
+sha256:
+551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a  SKILL.md
+c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059  SKILL-MECHANICS.md
+
+license: MIT, Copyright (c) 2026 Matt Pocock (https://github.com/mattpocock/skills/blob/main/LICENSE)
