@@ -1,6 +1,6 @@
 # dorsar-knowledge-base-setup
 
-A Claude Code and Codex skill for Dorsar Investment Management. It interviews Bill and his team about how SharePoint is organised, then generates the `dorsar-knowledge-base` skill that tells any agent where to read and where to file work.
+A Claude Code and Codex skill for Dorsar Investment Management. It interviews Bill and his team about how SharePoint is organised, then generates the `work` skill that tells any agent where to read and where to file work.
 
 ## Install (for the agent reading this)
 

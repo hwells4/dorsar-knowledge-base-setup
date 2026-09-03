@@ -28,7 +28,7 @@ Dorsar stays in SharePoint. There is no markdown wiki in month one; the Word not
     Review standards/               what a review must catch, cite, compare, escalate (written in week 1)
     CLAUDE.md, AGENTS.md            pointer paragraph from templates/kb-root/
     .agents/skills/
-      dorsar-knowledge-base/        the manual, edited in place as rules change
+      work/        the manual, edited in place as rules change
         preferences/<person>.md     personal habits for Bill, the analyst, the SharePoint teammate
       join-knowledge-base/          connects a new machine
 ```

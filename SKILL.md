@@ -1,6 +1,6 @@
 ---
 name: dorsar-knowledge-base-setup
-description: "Interview Bill Feinberg and the Dorsar Investment Management team about how their SharePoint is organised (private investment folders, quarterly packages, Word notes, entity financials), then generate the dorsar-knowledge-base skill that teaches any agent on Claude Code or Codex where to read and where to save work. Use when working with Dorsar, Bill, or when asked to define SharePoint inputs and outputs, map Dorsar's files, or set up Dorsar's knowledge base."
+description: "Interview Bill Feinberg and the Dorsar Investment Management team about how their SharePoint is organised (private investment folders, quarterly packages, Word notes, entity financials), then generate the work skill that teaches any agent on Claude Code or Codex where to read and where to save work. Use when working with Dorsar, Bill, or when asked to define SharePoint inputs and outputs, map Dorsar's files, or set up Dorsar's knowledge base."
 metadata:
   skill_md_budget: "120 lines"
   learnings_md_budget: "60 lines"
@@ -8,7 +8,7 @@ metadata:
   derived_from: "knowledge-base-setup"
 ---
 
-Interview, then build, for one client. Read [`references/dorsar-context.md`](references/dorsar-context.md) first: it holds what the August calls and emails already settled, so the interview spends its questions on what is still unknown. The interviewee is Bill Feinberg, CIO, with up to two team members (a part-time operations analyst who monitors Arch and a SharePoint team member). Every question is in plain English: "when you save a new version of an investment note, how do you tell it from the old one?", never "how do you handle version control?". The product is a **data map** of Dorsar's SharePoint and the generated `dorsar-knowledge-base` skill that carries it into every future session for Bill and his team.
+Interview, then build, for one client. Read [`references/dorsar-context.md`](references/dorsar-context.md) first: it holds what the August calls and emails already settled, so the interview spends its questions on what is still unknown. The interviewee is Bill Feinberg, CIO, with up to two team members (a part-time operations analyst who monitors Arch and a SharePoint team member). Every question is in plain English: "when you save a new version of an investment note, how do you tell it from the old one?", never "how do you handle version control?". The product is a **data map** of Dorsar's SharePoint and the generated `work` skill that carries it into every future session for Bill and his team.
 
 Facts are your job. Decisions are Bill's. Look before you ask.
 

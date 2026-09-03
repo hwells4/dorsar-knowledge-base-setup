@@ -1,6 +1,6 @@
 ---
-name: dorsar-knowledge-base
-description: "Where Dorsar Investment Management keeps its files and where new work goes: the investment folders and Word notes, entity financials, diligence, the Dorsar AI outputs ledger, the context files that remember Bill and the business, name and version rules, folders that stay untouched. Load before reading or creating any file for Dorsar, when asked where something lives, or when filing work."
+name: work
+description: "How work gets done at Dorsar Investment Management: where the information lives (investment folders and Word notes, entity financials, diligence), where outputs go by default, how they are named, and how every piece is recorded in the outputs index. Load at the start of every session and before reading or creating any file for Dorsar."
 ---
 
 Dorsar Investment Management manages roughly 65 private investments and 50 reporting entities. SharePoint is the source of truth; chat history is not. This skill is the team's operating manual.

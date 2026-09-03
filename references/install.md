@@ -8,7 +8,7 @@ Three people, Windows PCs, SharePoint synced through OneDrive. One real copy of 
 Dorsar AI/
   CLAUDE.md, AGENTS.md                      pointer paragraph from templates/kb-root/
   .agents/skills/
-    dorsar-knowledge-base/                  the manual, from templates/generated-skill/
+    work/                  the manual, from templates/generated-skill/
     join-knowledge-base/                    the bootstrap, from templates/join-knowledge-base/
 ```
 
