@@ -1,34 +1,33 @@
 # Install and hand over, Dorsar
 
-Three people, Windows PCs, SharePoint synced through OneDrive. One real copy of each skill in the synced SharePoint folder, links in each person's home directory, made by the join skill.
+Three people, Windows PCs, SharePoint synced through OneDrive. No links, no installer. The `work` skill lives in SharePoint and Claude Code reads it from there.
 
-## Layout in SharePoint
+## Where the skill lives
 
 ```
 <synced Dorsar SharePoint folder>/
-  AI Outputs/Index/index.md                 the ledger, from templates/outputs-index.md
-  CLAUDE.md, AGENTS.md                      pointer paragraph from templates/kb-root/
-  .agents/skills/
-    work/                                   the whole generated skill, from templates/generated-skill/
-    join-knowledge-base/                    the bootstrap, from templates/join-knowledge-base/
+  AI Outputs/Index/index.md       the ledger, from templates/outputs-index.md
+  CLAUDE.md, AGENTS.md            pointer paragraph from templates/kb-root/
+  .claude/skills/work/            the whole generated skill, from templates/generated-skill/
 ```
 
-`.agents/skills/` is the only real skills directory. Codex reads it in-project. Claude Code reads only `.claude/skills/`, and reaches the manual through the home-directory links. Links are never created inside the synced folder: OneDrive uploads a link's contents as a real folder and the next PC syncs a diverging copy.
+Claude Code loads project skills from `.claude/skills/` inside whatever folder the session is opened in. So the rule for everyone is one sentence: open the Code tab in the Dorsar SharePoint folder. Bill does it on his PC; the analyst and the SharePoint teammate do it on theirs once OneDrive has synced the folder. Nothing to install on any machine.
 
 ## Where it runs
 
-The synced Dorsar SharePoint folder is the project. Bill points the Claude Desktop app's Code tab at it, Codex opens in it, and there is no separate local project folder: a second folder would be a second source of truth, and SharePoint is the one Bill chose. The investment and financial libraries are sibling folders under the same OneDrive root and are read by the paths in the data map. The Code tab is the same Claude Code engine with the same skill folders, settings, and `CLAUDE.md`, so nothing here changes. Two things the desktop app needs on Windows: Git for Windows installed before the Code tab is first opened (without it the shell tool falls back to PowerShell, which is enough for `join.ps1` but not for anything bash-shaped), and the session switched to "Accept edits" so folder creation and junctions do not prompt one by one. Put Git for Windows on Bill's prep list.
+The synced Dorsar SharePoint folder is the project. Bill points the Claude Desktop app's Code tab at it, and there is no separate local project folder: a second folder would be a second source of truth, and SharePoint is the one Bill chose. The investment and financial libraries are sibling folders under the same OneDrive root and are read by the paths in the data map.
 
-## Join: one run per PC
+Two things the desktop app needs on Windows: Git for Windows installed before the Code tab is first opened, and the session switched to "Accept edits" so folder creation does not prompt one item at a time. Put Git for Windows on Bill's prep list.
 
-Each person opens Claude Code (or Codex) inside the synced Dorsar folder and says "set me up". The pointer in `CLAUDE.md` sends the agent to the join skill, which runs `join.ps1`. The script pins the folder so every file is on disk, then links each skill into `~/.claude/skills`, `~/.agents/skills`, and `~/.codex/skills` using directory junctions, which need no admin rights. Re-running is safe.
+## Verify
 
-Verify on Bill's PC during the session: a fresh Claude Code session in the home folder, one question ("where do draft reviews go?"), the answer names `AI Outputs`. Junction-backed skill loading on Windows is the thing to confirm on a real machine before the teammates join.
+Fresh Code tab session in the Dorsar folder. Two questions: "where do you save your work?" (the answer names `AI Outputs` and the index) and "who am I?" (the answer comes from `about-bill.md`). Those two answers are the demo.
 
-## What stays out of this install
+## What stays out, for now
 
-- Git. Dorsar has no repo and needs none in month one. SharePoint version history covers the manual.
-- The professional Dorsar AI identity, service accounts, Slack ingestion, and any Azure permissions. Those belong to the IT firm in month 2 or 3, per the working plan. Until then everything runs under Bill's own account on his own PC.
+- Loading `/work` from any directory, and Codex. Both need the skill linked into home folders; that is a later step in [`update.md`](update.md), added only when someone actually works outside the Dorsar folder.
+- Git. SharePoint version history covers the manual.
+- The professional Dorsar AI identity, service accounts, Slack ingestion, Azure permissions. IT firm, month 2 or 3.
 - Plugins. The manual ships as plain files so any of the three can change it by talking to their agent.
 
 ## Chat
@@ -37,4 +36,4 @@ Bill also uses Claude in the browser. There the skill is an uploaded zip that go
 
 ## Handover paragraph
 
-One paragraph in Bill's words: the AI saves its work in `AI Outputs` named by date, investment, and period, and records every piece in the index; the agent reads the investment folders and the entity financials; it never opens the named off-limits folders; nothing touches a Word note until he approves; to change a rule he says "from now on ..." and the manual updates for all three; his teammates join by opening Claude Code in the Dorsar folder and saying "set me up".
+One paragraph in Bill's words: open the Code tab in the Dorsar folder and `/work` is there; the AI saves its work in `AI Outputs` named by date, investment, and period, and records every piece in the index; it reads the investment folders and the entity financials; it never opens the named off-limits folders; nothing touches a Word note until he approves; to change a rule he says "from now on ..." and the manual updates for all three; his teammates get it by opening the same folder.
